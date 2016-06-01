@@ -1,0 +1,20 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+    parent:
+        label: Parent Hierarchy
+        type: hierarchy-relation
+        allowNull: true
+        nullString: --NONE--
+        allowChilds: true
+        showSelf: true
+        relationUp: parent
+        relationDown: childs
+        nameFrom: id
+        separator: ?->?
+        longFormat: true

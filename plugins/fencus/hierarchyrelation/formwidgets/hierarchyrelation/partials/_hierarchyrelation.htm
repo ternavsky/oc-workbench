@@ -1,0 +1,22 @@
+<?php if ($this->previewMode): ?>
+<?php else: ?>
+<div class="category-selector-widget" id="<?= $this->getId() ?>">
+    <select
+        name="<?= $name ?>"
+        class="form-control custom-select">
+        <?php
+        	foreach($optionsList as $option)
+			{
+				echo '<option value="'.$option->id.'"';
+				if($option->selected)
+					echo ' selected';
+				if($option->disabled)
+					echo ' disabled';
+				echo '>';
+				echo $option->name;
+				echo '</option>';
+			}
+        ?>
+     </select>
+</div>
+<?php endif ?>
